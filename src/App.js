@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+
+//Importamos Route
+import {Route} from "react-router-dom";
+
+//Importamos Componentes
+import Buscador from './Componentes/Buscador/Buscador.js';
+import Favoritos from './Componentes/Favoritos/Favoritos.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Nagvar */}
+      {/* <Route exact path="/" component={Buscador} />
+          <Route path="/favs" component={Favorites} />
+          <Route path="/movie/:id" component={Movie} /> */}
+          <Route exact path="/" component={Buscador} />
+          <Route path="/favs" component={Favoritos} />
     </div>
   );
 }
